@@ -6,7 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  //Propiedades del Componente:
-  title = 'primer-proyect-angular';
-  saludo = 'Hellow World';
+  title = 'segundo-proyect-angular';
 }
