@@ -1,5 +1,17 @@
 <p>Nombre del empleado: {{nombre}} {{getApellidos()}}</p>
 <p>Edad: {{edad + 10}}</p>
-<p>Rol en la empresa: {{getRol()}}</p>
+<p>Rol 1 en la empresa: {{rol.value}}</p>
+<p>Rol 2 en la empresa: {{rolBtn.value}}</p>
 <p>{{(edad < 18) ? 'Es menor de edad':'Es mayor de edad'}}</p><!--Operador Ternario: condición ? valor True : valor false-->
+<hr class="linea-separadora">
+<br>
+<label>Introduce tu rol en la empresa:</label>
+<br><br>
+<input type="text" #rol id="" (keyup)='0'><!--Enviamos los datos sin necesidad de utilizar un btn-->
+<label>Se envia el texto si utilizar el btn</label>
+<br>
+<input type="text" #rolBtn id=""><!--#rol identificamos el elemento html dentro del DOM-->
+<br><br>
+<button (click)='enviarRol(rol.value)'>Enviar Rol</button>
+<br><br>
 <hr class="linea-separadora">
