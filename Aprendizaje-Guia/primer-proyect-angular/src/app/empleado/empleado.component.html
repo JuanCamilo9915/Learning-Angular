@@ -8,10 +8,25 @@
 <label>Introduce tu rol en la empresa:</label>
 <br><br>
 <input type="text" #rol id="" (keyup)='0'><!--Enviamos los datos sin necesidad de utilizar un btn-->
-<label>Se envia el texto si utilizar el btn</label>
+<label>Se envia el texto sin utilizar el btn</label>
 <br>
-<input type="text" #rolBtn id=""><!--#rol identificamos el elemento html dentro del DOM-->
+<input type="text" #rolBtn id="" [disabled]="cajaCapturaTexto"><!--#rol identificamos el elemento html dentro del DOM-->
 <br><br>
 <button (click)='enviarRol(rol.value)'>Enviar Rol</button>
+<br><br>
+{{textoInfoRegistrado}}
+<br>
+<label>Registro:</label>
+<input type="checkbox" name="" id="registro" [checked]="usuRegis" (click)="setUsuRegisEvent()">
+<br>
+<br>
+<hr class="linea-separadora">
+<br>
+<label>Registro 2:</label>
+<input type="radio" name="RegisN" value="si" id="registro" [checked]="usuRegis" (click)="setUsuRegisEvent2($event)">
+<br>
+<label>No Registrado:</label>
+<input type="radio" name="RegisN" value="no" id="registro" [checked]="usuRegis" (click)="setUsuRegisEvent2($event)">
+{{getUsuRegis()}}<!--Interpolación--->
 <br><br>
 <hr class="linea-separadora">
