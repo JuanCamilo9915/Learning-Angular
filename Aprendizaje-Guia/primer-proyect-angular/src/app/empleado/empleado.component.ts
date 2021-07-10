@@ -11,7 +11,7 @@ export class EmpleadoComponent implements OnInit {
   nombre = 'Juan Camilo';
   private apellidos = 'González Duque';
   edad = 12;
-  //private rol = 'Estudiante';
+  rol = 'Estudiante';
   //Propiedades de Binding:
   cajaCapturaTexto = false;//Recibe como valores true o false.
   usuRegis = true;//Recibe como valores true o false.
@@ -50,6 +50,10 @@ export class EmpleadoComponent implements OnInit {
 
   enviarRol(rol: String) {
     return rol;//si comento esta linea igual funciona, interesante jeje
+  }
+
+  modificarRol(nuevoRol: Event){
+    this.rol = (<HTMLInputElement>nuevoRol.target).value;
   }
 
   constructor() {
