@@ -1,0 +1,14 @@
+*{
+     margin: 0%;
+     padding: 0%;
+     list-style: none;
+     text-decoration: none;
+     box-sizing: border-box;
+     font-family: 'Times New Roman';
+     /*color: white;*/
+}
+
+.btns{
+     margin: 0% 3% 0% 0%;
+     font-size: 20px;
+}
